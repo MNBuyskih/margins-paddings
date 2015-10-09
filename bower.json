@@ -1,0 +1,18 @@
+{
+  "name": "margins-paddings",
+  "version": "0.0.1",
+  "authors": ["MNB <buyskih@gmail.com>"],
+  "description": "Quick css margins/paddings hooks",
+  "moduleType": [],
+  "keywords": ["css", "stylus"],
+  "license": "MIT",
+  "homepage": "https://github.com/MNBuyskih/margins-paddings",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ]
+}
