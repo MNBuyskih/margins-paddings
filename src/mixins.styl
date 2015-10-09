@@ -2,9 +2,9 @@
 
 generate($property, $propertyMap, $unit = px)
     for $size, $s in $sizes
-        {$propertyMap}-{$size}
+        .{$propertyMap}-{$size}
             {$property} unit($sizesVals[$s], $unit)
 
         for $direction, $d in $directions
-            {$propertyMap}-{$directionsMaps[$d]}-{$size}
+            .{$propertyMap}-{$directionsMaps[$d]}-{$size}
                 {$property}-{$direction} unit($sizesVals[$s], $unit)
