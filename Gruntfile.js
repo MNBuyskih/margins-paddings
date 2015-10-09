@@ -7,7 +7,7 @@ module.exports = function (grunt) {
                     'build/paddings.css': 'src/paddings.styl'
                 },
                 options: {
-                    compress: false,
+                    compress: true,
                 },
             }
         }
