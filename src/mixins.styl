@@ -1,10 +1,11 @@
 @import variables
 
-generate($property, $propertyMap, $unit = px)
+generate($property, $propertyMap, $unit = px, $positiveOnly = false)
     for $size, $s in $sizes
-        .{$propertyMap}-{$size}
-            {$property} unit($sizesVals[$s], $unit)
+        if !($positiveOnly && $sizesValues[$s] < 0)
+            .{$propertyMap}-{$size}
+                {$property} unit($sizesValues[$s], $unit)
 
-        for $direction, $d in $directions
-            .{$propertyMap}-{$directionsMaps[$d]}-{$size}
-                {$property}-{$direction} unit($sizesVals[$s], $unit)
+            for $direction, $d in $directions
+                .{$propertyMap}-{$directionsMaps[$d]}-{$size}
+                    {$property}-{$direction} unit($sizesValues[$s], $unit)
