@@ -3,9 +3,9 @@
 generate($property, $propertyMap, $unit = px, $positiveOnly = false)
     for $size, $s in $sizes
         if !($positiveOnly && $sizesValues[$s] < 0)
-            .{$propertyMap}-{$size}
+            .{$propertyMap}{$size}
                 {$property} unit($sizesValues[$s], $unit)
 
             for $direction, $d in $directions
-                .{$propertyMap}-{$directionsMaps[$d]}-{$size}
+                .{$propertyMap}{$directionsMaps[$d]}-{$size}
                     {$property}-{$direction} unit($sizesValues[$s], $unit)
